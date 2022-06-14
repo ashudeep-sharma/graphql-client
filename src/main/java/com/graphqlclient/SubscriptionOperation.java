@@ -15,7 +15,8 @@ public class SubscriptionOperation {
 
     public SubscriptionOperation() {
         this.okHttpClient = new OkHttpClient.Builder()
-                .addInterceptor(new AuthorizationInterceptor()).authenticator()
+                .addInterceptor(new AuthorizationInterceptor())
+                //.authenticator()
                 .build();
 
         this.apolloClient = ApolloClient.builder()
