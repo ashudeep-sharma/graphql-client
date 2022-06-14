@@ -50,9 +50,9 @@
                             <services>
                                 <example-api>
                                     <compilationUnit>
-                                        <name>example</name>
+                                        <name>service</name>
                                         <compilerParams>
-                                            <schemaPackageName>com.example</schemaPackageName>
+                                            <rootPackageName>com.example</rootPackageName>
                                         </compilerParams>
                                     </compilationUnit>
                                 </example-api>
