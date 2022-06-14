@@ -1,0 +1,14 @@
+fragment launchFragment on Launch {
+    id
+    site
+    mission {
+        name
+        missionPatch
+    }
+}
+
+query LaunchDetailsFragment($id:ID!) {
+    launch(id: $id) {
+        ...launchFragment
+    }
+}
