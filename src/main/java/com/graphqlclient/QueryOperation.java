@@ -2,6 +2,7 @@ package com.graphqlclient;
 
 import com.apollographql.apollo.ApolloCall;
 import com.apollographql.apollo.ApolloClient;
+import com.apollographql.apollo.api.Query;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
 import com.example.LaunchDetailsQuery;
@@ -18,6 +19,8 @@ public class QueryOperation {
     }
 
     public void execute() {
+
+        Query launchQ = new LaunchDetailsQuery(bookingId);
         apolloClient.query(new LaunchDetailsQuery(bookingId)).enqueue(new ApolloCall.Callback<LaunchDetailsQuery.Data>() {
             @Override
             public void onResponse(@NotNull Response<LaunchDetailsQuery.Data> response) {

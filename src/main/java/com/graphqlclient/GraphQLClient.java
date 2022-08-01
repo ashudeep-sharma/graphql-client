@@ -17,10 +17,10 @@ public class GraphQLClient {
                 .build();
 
         //Query Functionality Simulation
-        System.out.println("Query Operation Initiated");
+        /*System.out.println("Query Operation Initiated");
         QueryOperation queryOperation = new QueryOperation(apolloClient, "89");
         queryOperation.execute();
-        System.out.println("Query Operation Completed");
+        System.out.println("Query Operation Completed");*/
 
         //Mutation Functionality Simulation
         /*System.out.println("Mutation Operation Initiated");
@@ -29,13 +29,13 @@ public class GraphQLClient {
         bookingIdList.add("109");
         MutationOperation mutationOperation = new MutationOperation(bookingIdList);
         mutationOperation.execute();
-        System.out.println("Mutation Operation Completed");
+        System.out.println("Mutation Operation Completed");*/
 
         //Fragment Functionality Simulation
-        System.out.println("Fragment Operation Initiated");
+        /*System.out.println("Fragment Operation Initiated");
         FragmentOperation fragmentOperation = new FragmentOperation(apolloClient, "89");
         fragmentOperation.execute();
-        System.out.println("Fragment Operation Completed");
+        System.out.println("Fragment Operation Completed");*/
 
         //Pagination and Cursor Functionality Simulation
         System.out.println("Pagination Operation Initiated");
@@ -44,7 +44,7 @@ public class GraphQLClient {
         System.out.println("Pagination Operation Completed");
 
         //Subscription Functionality Simulation
-        try {
+        /*try {
             System.out.println("Subscription Operation Initiated");
             SubscriptionOperation subscriptionOperation = new SubscriptionOperation();
             subscriptionOperation.execute();
@@ -56,6 +56,7 @@ public class GraphQLClient {
             mutationOpForSubscription.execute();
             mutationOpForSubscription.execute();
             mutationOpForSubscription.execute();
+            Thread.sleep(5000);
             System.out.println("Subscription Operation Completed");
         } catch (InterruptedException interruptedException) {
             System.out.println(interruptedException.getMessage());

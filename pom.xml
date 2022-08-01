@@ -55,6 +55,18 @@
                                             <rootPackageName>com.example</rootPackageName>
                                         </compilerParams>
                                     </compilationUnit>
+                                    //Introspection Target for fetching the Schema
+                                    <introspection>
+                                         <enabled>true</enabled>
+                                         <endpointUrl>https://apollo-fullstack-tutorial.herokuapp.com/graphql</endpointUrl>
+                                         <schemaFile>C:\\Users\\ashudsha\\graphql-client\\src\\main\\graphql\\service\\schema.json</schemaFile>
+                                         <connectTimeoutSeconds>10</connectTimeoutSeconds>
+                                         <readTimeoutSeconds>10</readTimeoutSeconds>
+                                         <writeTimeoutSeconds>10</writeTimeoutSeconds>
+                                         <useSelfSignedCertificat>false</useSelfSignedCertificat>
+                                         <useGzip>false</useGzip>
+                                         <prettyPrint>false</prettyPrint>
+                                    </introspection>
                                 </example-api>
                             </services>
                         </configuration>
