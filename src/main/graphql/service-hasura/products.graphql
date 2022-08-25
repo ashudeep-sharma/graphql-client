@@ -1,0 +1,8 @@
+query getProductsbyId_Price_Name($id: Int, $price: Int, $pname: String) {
+    products(where: {price: {_gt: $price}, product_id: {_gt: $id}, product_name: {_ilike: $pname}}) {
+        brand
+        product_id
+        price
+        product_name
+    }
+}

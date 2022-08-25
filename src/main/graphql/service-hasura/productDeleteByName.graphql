@@ -1,0 +1,10 @@
+mutation productDeleteByName($pid: Int) {
+    delete_products(where: {product_id: {_eq: $pid}}) {
+        returning {
+            brand
+            price
+            product_id
+            product_name
+        }
+    }
+}

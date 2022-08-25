@@ -4,12 +4,12 @@ import com.apollographql.apollo.ApolloCall;
 import com.apollographql.apollo.ApolloClient;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
-import com.example.LaunchDetailsFragmentQuery;
+//import com.example.LaunchDetailsFragmentQuery;
 import org.jetbrains.annotations.NotNull;
 
 public class FragmentOperation {
 
-    private final ApolloClient apolloClient;
+    /*private final ApolloClient apolloClient;
     private String bookingId;
 
     public FragmentOperation(ApolloClient apolloClient,String id) {
@@ -34,5 +34,5 @@ public class FragmentOperation {
                 System.out.println("Apollo Client Error:" + e);
             }
         });
-    }
+    }*/
 }

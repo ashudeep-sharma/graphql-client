@@ -1,0 +1,11 @@
+mutation productPriceUpdate($id:Int,$incr:Int){
+    update_products(where: {}, _inc: {product_id: $id}, _set: {price: $incr}) {
+        affected_rows
+        returning {
+            brand
+            price
+            product_id
+            product_name
+        }
+    }
+}

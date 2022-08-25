@@ -50,7 +50,7 @@
                             <services>
                                 <example-api>
                                     <compilationUnit>
-                                        <name>service</name>
+                                        <name>service-hasura</name>
                                         <compilerParams>
                                             <rootPackageName>com.example</rootPackageName>
                                         </compilerParams>
@@ -58,8 +58,12 @@
                                     //Introspection Target for fetching the Schema
                                     <introspection>
                                          <enabled>true</enabled>
-                                         <endpointUrl>https://apollo-fullstack-tutorial.herokuapp.com/graphql</endpointUrl>
-                                         <schemaFile>C:\\Users\\ashudsha\\graphql-client\\src\\main\\graphql\\service\\schema.json</schemaFile>
+                                         <!--<endpointUrl>https://apollo-fullstack-tutorial.herokuapp.com/graphql</endpointUrl>-->
+                                         <endpointUrl>${HASURA-ENDPOINT}</endpointUrl>
+                                         <schemaFile>${basedir}/src/main/graphql/service-hasura/schema.json</schemaFile>
+                                        <headers>
+                                            <x-hasura-admin-secret>${HASURA-SECRET}</x-hasura-admin-secret>
+                                        </headers>
                                          <connectTimeoutSeconds>10</connectTimeoutSeconds>
                                          <readTimeoutSeconds>10</readTimeoutSeconds>
                                          <writeTimeoutSeconds>10</writeTimeoutSeconds>

@@ -1,0 +1,8 @@
+mutation deleteProductsByID($pid: Int!) {
+    delete_products_by_pk(product_id: $pid) {
+        brand
+        price
+        product_id
+        product_name
+    }
+}

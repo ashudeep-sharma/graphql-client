@@ -5,12 +5,12 @@ import com.apollographql.apollo.ApolloClient;
 import com.apollographql.apollo.api.Input;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
-import com.example.LaunchListQuery;
+//import com.example.LaunchListQuery;
 import org.jetbrains.annotations.NotNull;
 
 public class PaginationOperation {
 
-    private final ApolloClient apolloClient;
+    /*private final ApolloClient apolloClient;
 
     public PaginationOperation(ApolloClient apolloClient) {
         this.apolloClient = apolloClient;
@@ -38,5 +38,5 @@ public class PaginationOperation {
 
         //For fetching the list at a particular Cursor
         //Input<String> inputList = Input.optional("1581951955");
-    }
+    }*/
 }

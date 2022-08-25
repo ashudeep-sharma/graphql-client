@@ -1,0 +1,8 @@
+mutation productInsert($id:Int,$brand:String,$pname:String, $price:Int){
+    insert_products_one(object: {brand: $brand, product_id:$id, product_name: $pname, price: $price}) {
+        brand
+        product_name
+        product_id
+        price
+    }
+}

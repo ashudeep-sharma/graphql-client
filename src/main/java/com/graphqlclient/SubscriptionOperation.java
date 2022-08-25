@@ -5,12 +5,12 @@ import com.apollographql.apollo.ApolloSubscriptionCall;
 import com.apollographql.apollo.api.Response;
 import com.apollographql.apollo.exception.ApolloException;
 import com.apollographql.apollo.subscription.WebSocketSubscriptionTransport;
-import com.example.TripsBookedSubscription;
+//import com.example.TripsBookedSubscription;
 import okhttp3.OkHttpClient;
 import org.jetbrains.annotations.NotNull;
 
 public class SubscriptionOperation {
-    private final ApolloClient apolloClient;
+    /*private final ApolloClient apolloClient;
     private final OkHttpClient okHttpClient;
 
     public SubscriptionOperation() {
@@ -59,5 +59,5 @@ public class SubscriptionOperation {
                 System.out.println("Apollo Client Error:" + exception);
             }
         });
-    }
+    }*/
 }

@@ -1,35 +1,39 @@
 package com.graphqlclient;
 
 import com.apollographql.apollo.ApolloClient;
+import okhttp3.OkHttpClient;
 
 import java.util.ArrayList;
 
 public class GraphQLClient {
-    public static final String graphQLServerURL = "https://apollo-fullstack-tutorial.herokuapp.com/graphql";
+    //public static final String graphQLServerURL = "https://apollo-fullstack-tutorial.herokuapp.com/graphql";
 
-    public static final String webSocketURL = "wss://apollo-fullstack-tutorial.herokuapp.com/graphql";
+    public static final String graphQLServerURL = "https://welcomed-tahr-83.hasura.app/v1/graphql";
+
+    //public static final String webSocketURL = "wss://apollo-fullstack-tutorial.herokuapp.com/graphql";
 
     public void connect() {
         ApolloClient.builder();
         //Building Apollo Client Instance
         ApolloClient apolloClient = ApolloClient.builder()
                 .serverUrl(graphQLServerURL)
+                .okHttpClient(new OkHttpClient.Builder().addInterceptor(new AuthorizationInterceptor()).build())
                 .build();
 
         //Query Functionality Simulation
-        /*System.out.println("Query Operation Initiated");
+        System.out.println("Query Operation Initiated");
         QueryOperation queryOperation = new QueryOperation(apolloClient, "89");
         queryOperation.execute();
-        System.out.println("Query Operation Completed");*/
+        System.out.println("Query Operation Completed");
 
         //Mutation Functionality Simulation
-        /*System.out.println("Mutation Operation Initiated");
+        System.out.println("Mutation Operation Initiated");
         ArrayList<String> bookingIdList = new ArrayList<>();
         bookingIdList.add("89");
         bookingIdList.add("109");
         MutationOperation mutationOperation = new MutationOperation(bookingIdList);
         mutationOperation.execute();
-        System.out.println("Mutation Operation Completed");*/
+        System.out.println("Mutation Operation Completed");
 
         //Fragment Functionality Simulation
         /*System.out.println("Fragment Operation Initiated");
@@ -38,10 +42,10 @@ public class GraphQLClient {
         System.out.println("Fragment Operation Completed");*/
 
         //Pagination and Cursor Functionality Simulation
-        System.out.println("Pagination Operation Initiated");
+        /*System.out.println("Pagination Operation Initiated");
         PaginationOperation paginationOperation = new PaginationOperation(apolloClient);
         paginationOperation.execute();
-        System.out.println("Pagination Operation Completed");
+        System.out.println("Pagination Operation Completed");*/
 
         //Subscription Functionality Simulation
         /*try {
